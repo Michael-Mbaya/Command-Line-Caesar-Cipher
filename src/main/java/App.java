@@ -2,7 +2,7 @@ import java.io.Console;
 
 public class App {
     public static void main(String[] args){
-        Boolean programRun = true;
+        boolean programRun = true;
     while (programRun) {
         DataProperties dataProperties = new DataProperties();
 
@@ -18,7 +18,6 @@ public class App {
             System.out.println("Enter word or letter to Encrypt\"\n");
             Console optionOneConsole = System.console();
             String OptionOne = (optionOneConsole.readLine()).toLowerCase().replaceAll("[^\\p{L}\\p{Z}]", "").replaceAll(" ", "");
-//            System.out.println(OptionOne);
 
             System.out.println("Enter key number between (1-26) to encrypt\n");
             Console optionTwoConsole = System.console();
@@ -40,8 +39,6 @@ public class App {
             System.out.println("Enter word or letter to Decrypt");
             Console optionTwoConsole = System.console();
             String optionTwo = (optionTwoConsole.readLine()).toLowerCase().replaceAll("[^\\p{L}\\p{Z}]", "").replaceAll(" ", "");
-            //            System.out.println(optionTwo.toUpperCase());
-            //            String optionTwo = scanner.nextLine();
 
             System.out.println("Enter the Shift key number (1-26) used to Encrypt the Word/Letter \n");
             Console shiftKeyConsole = System.console();
@@ -56,9 +53,11 @@ public class App {
         }
         else if (option.equals("q") || option.equals("Q")) {
             programRun = false;
-        } else {
+        }
+        else {
             System.out.println("Wrong Option, Try Again!\n");
         }
+
     }
 
     }
