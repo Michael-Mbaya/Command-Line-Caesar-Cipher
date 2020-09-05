@@ -1,8 +1,8 @@
 public class DataProperties {
-    private String ALPHABET;
-    private String ChosenInt;
-    private String ChosenText;
-    private int ChosenMyInt;
+    public String ALPHABET;
+    public String ChosenInt;
+    public String ChosenText;
+    public int ChosenMyInt;
 
     public String getALPHABET() {
         return ALPHABET;
@@ -35,6 +35,5 @@ public class DataProperties {
     public void setChosenInt(int choseInt) {
         this.ChosenMyInt = choseInt;
     }
-
 
 }
