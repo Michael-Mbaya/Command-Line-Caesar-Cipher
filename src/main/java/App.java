@@ -11,7 +11,7 @@ public class App {
 
         Console optionConsole = System.console() ;
 //        new Scanner(System.in);
-        System.out.println("Choose an option");
+        System.out.println("Choose an option '1' or '2'");
         System.out.println("1. Encrypt");
         System.out.println("2. Decryption\n");
 
@@ -20,7 +20,7 @@ public class App {
         if ("1".equals(option)) {
             System.out.println("Enter word or letter to Encrypt\"\n");
             Console optionOneConsole = System.console();
-            String OptionOne = optionOneConsole.readLine();
+            String OptionOne = (optionOneConsole.readLine()).toLowerCase();
 
             System.out.println("Enter key number between (1-26) to encrypt\n");
             Console optionTwoConsole = System.console();
@@ -37,7 +37,7 @@ public class App {
         } else if ("2".equals(option)) {
             System.out.println("Enter word or letter to Decrypt");
             Console optionTwoConsole = System.console();
-            String optionTwo = optionTwoConsole.readLine();
+            String optionTwo = (optionTwoConsole.readLine()).toLowerCase();
 //            String optionTwo = scanner.nextLine();
 
             System.out.println("Enter the Shift key number (1-26) used to Encrypt the Word/Letter \n");
