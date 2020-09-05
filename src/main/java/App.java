@@ -20,7 +20,8 @@ public class App {
         if ("1".equals(option)) {
             System.out.println("Enter word or letter to Encrypt\"\n");
             Console optionOneConsole = System.console();
-            String OptionOne = (optionOneConsole.readLine()).toLowerCase();
+            String OptionOne = (optionOneConsole.readLine()).toLowerCase().replaceAll("[^\\p{L}\\p{Z}]","").replaceAll(" ","");
+            System.out.println(OptionOne);
 
             System.out.println("Enter key number between (1-26) to encrypt\n");
             Console optionTwoConsole = System.console();
@@ -32,8 +33,9 @@ public class App {
             String enc = Encode.getDataProperties(OptionOne, chosenInt);
 //            String dec = Decode.getDataProperties(OptionOne, chosenInt);
 
-            System.out.println("Original Text: " + dataProperties.getChosenText() );
-            System.out.println("Encrypted: " + enc + " (*Spaces in between words Removed)");
+            System.out.println("Original Text: " + dataProperties.getChosenText().toUpperCase() );
+            System.out.println("Encrypted: " + enc.toUpperCase() + "\n" );
+            System.out.println("( *Encrypted Text has spaces and Punctuations removed from Original text )");
 //            System.out.println("Decrypted: " + dec);
 
         } else if ("2".equals(option)) {
