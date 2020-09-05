@@ -7,8 +7,8 @@ public class Encode {
         for (int i=0;i<newText.length();i++){
             int charPosition =  ALPHABET.indexOf(newText.charAt(i));
 
-            int newkey = (charPosition + newKey) % 26;
-            char newChar = ALPHABET.charAt(newkey);
+            Integer newShiftKey = (charPosition + newKey) % 26;
+            char newChar = ALPHABET.charAt(newShiftKey);
 
 //            encrypted += newChar;
             encrypted = encrypted + newChar;

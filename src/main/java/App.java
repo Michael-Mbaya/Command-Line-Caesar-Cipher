@@ -10,10 +10,10 @@ public class App {
         DataProperties dataProperties = new DataProperties();
 
         Console optionConsole = System.console() ;
-//        new Scanner(System.in);
+
         System.out.println("Choose an option '1' or '2'");
-        System.out.println("1. Encrypt");
-        System.out.println("2. Decryption\n");
+        System.out.println("1. To Encrypt");
+        System.out.println("2. To Decrypt\n");
 
         String option = optionConsole.readLine();
 
@@ -30,8 +30,10 @@ public class App {
             dataProperties.setChosenMyText(OptionOne);
             dataProperties.setChosenInt(chosenInt);
             String enc = Encode.getDataProperties(OptionOne, chosenInt);
-            String dec = Decode.getDataProperties(OptionOne, chosenInt);
-            System.out.println("Encrypted: " + enc);
+//            String dec = Decode.getDataProperties(OptionOne, chosenInt);
+
+            System.out.println("Original Text: " + dataProperties.getChosenText() );
+            System.out.println("Encrypted: " + enc + " (*Spaces in between words Removed)");
 //            System.out.println("Decrypted: " + dec);
 
         } else if ("2".equals(option)) {
