@@ -1,14 +1,13 @@
 public class TextAndShift {
 
-    public String ChosenInt;
-    public String ChosenText;
-    public int ChosenMyInt;
+    private String ChosenText;
+    private int ChosenMyInt;
 
     public String getChosenText() {
         return ChosenText;
     }
 
-    public void setChosenMyText(String choseMyText) {
+    public void setChosenText(String choseMyText) {
         this.ChosenText = choseMyText;
     }
 

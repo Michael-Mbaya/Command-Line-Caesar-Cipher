@@ -19,12 +19,12 @@ public class App {
             Console optionOneConsole = System.console();
             String OptionOne = (optionOneConsole.readLine()).toLowerCase().replaceAll("[^\\p{L}\\p{Z}]", "").replaceAll(" ", "");
 
-            System.out.println("Enter key number between (1-26) to encrypt");
+            System.out.println("Enter Shift Key Number to encrypt with:");
             Console optionTwoConsole = System.console();
             String chosenNumber = optionTwoConsole.readLine();
             int chosenInt = Integer.parseInt(chosenNumber);
 
-            textAndShift.setChosenMyText(OptionOne);
+            textAndShift.setChosenText(OptionOne);
             textAndShift.setChosenInt(chosenInt);
             String enc = Encode.getData(OptionOne, chosenInt);
 
@@ -38,12 +38,12 @@ public class App {
             Console optionTwoConsole = System.console();
             String optionTwo = (optionTwoConsole.readLine()).toLowerCase().replaceAll("[^\\p{L}\\p{Z}]", "").replaceAll(" ", "");
 
-            System.out.println("Enter the Shift key number (1-26) used to Encrypt the Word/Letter:");
+            System.out.println("Enter the Shift Key Number used:");
             Console shiftKeyConsole = System.console();
             String chosenKeyNumber = shiftKeyConsole.readLine();
             int choseInt = Integer.parseInt(chosenKeyNumber);
 
-            textAndShift.setChosenMyText(optionTwo);
+            textAndShift.setChosenText(optionTwo);
             textAndShift.setChosenInt(choseInt);
             String dec = Decode.getData(optionTwo, choseInt);
 
