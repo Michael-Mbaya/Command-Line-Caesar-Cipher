@@ -4,7 +4,7 @@ public class App {
     public static void main(String[] args){
         boolean programRun = true;
     while (programRun) {
-        DataProperties dataProperties = new DataProperties();
+        TextAndShift textAndShift = new TextAndShift();
 
         Console optionConsole = System.console();
         System.out.println("Choose an option 'e' or 'd' or 'q': ");
@@ -15,39 +15,39 @@ public class App {
         String option = optionConsole.readLine();
 
         if (option.equals("e") || option.equals("E")) {
-            System.out.println("Enter word or letter to Encrypt\"\n");
+            System.out.println("Enter word or letter to Encrypt:");
             Console optionOneConsole = System.console();
             String OptionOne = (optionOneConsole.readLine()).toLowerCase().replaceAll("[^\\p{L}\\p{Z}]", "").replaceAll(" ", "");
 
-            System.out.println("Enter key number between (1-26) to encrypt\n");
+            System.out.println("Enter key number between (1-26) to encrypt");
             Console optionTwoConsole = System.console();
             String chosenNumber = optionTwoConsole.readLine();
             int chosenInt = Integer.parseInt(chosenNumber);
 
-            dataProperties.setChosenMyText(OptionOne);
-            dataProperties.setChosenInt(chosenInt);
-            String enc = Encode.getDataProperties(OptionOne, chosenInt);
+            textAndShift.setChosenMyText(OptionOne);
+            textAndShift.setChosenInt(chosenInt);
+            String enc = Encode.getData(OptionOne, chosenInt);
 
-            System.out.println( "Original Text: " + dataProperties.getChosenText().toUpperCase() );
+            System.out.println( "Original Text: " + textAndShift.getChosenText().toUpperCase() );
             System.out.println( "Encrypted: " + enc.toUpperCase() );
-            System.out.println( "( *Encrypted Text has spaces and Punctuations removed from Original text )" );
+            System.out.println( "( *Encrypted Text has spaces and Punctuations removed from Original text )\n" );
 
         }
         else if (option.equals("d") || option.equals("D")) {
-            System.out.println("Enter word or letter to Decrypt");
+            System.out.println("Enter word or letter to Decrypt:");
             Console optionTwoConsole = System.console();
             String optionTwo = (optionTwoConsole.readLine()).toLowerCase().replaceAll("[^\\p{L}\\p{Z}]", "").replaceAll(" ", "");
 
-            System.out.println("Enter the Shift key number (1-26) used to Encrypt the Word/Letter \n");
+            System.out.println("Enter the Shift key number (1-26) used to Encrypt the Word/Letter:");
             Console shiftKeyConsole = System.console();
             String chosenKeyNumber = shiftKeyConsole.readLine();
             int choseInt = Integer.parseInt(chosenKeyNumber);
 
-            dataProperties.setChosenMyText(optionTwo);
-            dataProperties.setChosenInt(choseInt);
-            String dec = Decode.getDataProperties(optionTwo, choseInt);
+            textAndShift.setChosenMyText(optionTwo);
+            textAndShift.setChosenInt(choseInt);
+            String dec = Decode.getData(optionTwo, choseInt);
 
-            System.out.println( "Original Text: " + dataProperties.getChosenText().toUpperCase() );
+            System.out.println( "Original Text: " + textAndShift.getChosenText().toUpperCase() );
             System.out.println( "Decrypted: " + dec.toUpperCase() );
             System.out.println( "( *Encrypted Text has spaces and Punctuations removed from Original text )\n" );
 

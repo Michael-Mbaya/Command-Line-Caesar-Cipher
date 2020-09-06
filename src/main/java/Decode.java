@@ -1,7 +1,7 @@
 public class Decode {
     public static  String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
 
-    public static String getDataProperties(String newText,int newKey){
+    public static String getData(String newText,int newKey){
         String decodedText = "";
         for (int i = 0; i< newText.length(); i++){
             int charPosition = ALPHABET.indexOf(newText.charAt(i));

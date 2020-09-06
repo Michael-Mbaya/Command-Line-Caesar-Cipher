@@ -1,4 +1,4 @@
-public class DataProperties {
+public class TextAndShift {
 
     public String ChosenInt;
     public String ChosenText;
