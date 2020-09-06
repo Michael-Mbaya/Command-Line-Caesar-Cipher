@@ -4,7 +4,6 @@ public class DataProperties {
     public String ChosenText;
     public int ChosenMyInt;
 
-
     public String getChosenText() {
         return ChosenText;
     }

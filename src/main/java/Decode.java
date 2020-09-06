@@ -1,5 +1,5 @@
 public class Decode {
-    public static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
+    public static  String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
 
     public static String getDataProperties(String newText,int newKey){
         String decodedText = "";

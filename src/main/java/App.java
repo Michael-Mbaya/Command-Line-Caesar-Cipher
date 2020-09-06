@@ -28,9 +28,9 @@ public class App {
             dataProperties.setChosenInt(chosenInt);
             String enc = Encode.getDataProperties(OptionOne, chosenInt);
 
-            System.out.println("Original Text: " + dataProperties.getChosenText().toUpperCase());
-            System.out.println("Encrypted: " + enc.toUpperCase() + "\n");
-            System.out.println("( *Encrypted Text has spaces and Punctuations removed from Original text )");
+            System.out.println( "Original Text: " + dataProperties.getChosenText().toUpperCase() );
+            System.out.println( "Encrypted: " + enc.toUpperCase() );
+            System.out.println( "( *Encrypted Text has spaces and Punctuations removed from Original text )" );
 
         }
         else if (option.equals("d") || option.equals("D")) {
@@ -47,13 +47,14 @@ public class App {
             dataProperties.setChosenInt(choseInt);
             String dec = Decode.getDataProperties(optionTwo, choseInt);
 
-            System.out.println("Original Text: " + dataProperties.getChosenText().toUpperCase());
-            System.out.println("Decrypted: " + dec.toUpperCase() + "\n");
-            System.out.println("( *Encrypted Text has spaces and Punctuations removed from Original text )\n");
+            System.out.println( "Original Text: " + dataProperties.getChosenText().toUpperCase() );
+            System.out.println( "Decrypted: " + dec.toUpperCase() );
+            System.out.println( "( *Encrypted Text has spaces and Punctuations removed from Original text )\n" );
 
         }
         else if (option.equals("q") || option.equals("Q")) {
             programRun = false;
+            System.out.println("\n");
         }
         else {
             System.out.println("Wrong Option, Try Again!\n");
