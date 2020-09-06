@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 public class EncodeTest {
     @Test
     public void isEncode_encryptData_true(){
-        assertEquals( "cd", Encode.getDataProperties("ab",2));
+        assertEquals( "cd", Encode.getData("ab",2));
     }
     @Test
     public void encode_instanceOf_object(){

@@ -6,7 +6,7 @@ public class DecodeTest {
     @Test
     public void isDecode_decryptData_true(){
         Decode decode = new Decode();
-        assertEquals("yz",decode.getDataProperties("ab",2));
+        assertEquals("yz",decode.getData("ab",2));
     }
     @Test
     public void decode_instanceOf_object(){
