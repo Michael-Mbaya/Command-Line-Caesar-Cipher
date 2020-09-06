@@ -48,7 +48,7 @@ public class App {
             String dec = Decode.getDataProperties(optionTwo, choseInt);
 
             System.out.println("Original Text: " + dataProperties.getChosenText().toUpperCase());
-            System.out.println("Decrypted: " + dec);
+            System.out.println("Decrypted: " + dec.toUpperCase() + "\n");
             System.out.println("( *Encrypted Text has spaces and Punctuations removed from Original text )\n");
 
         }

@@ -11,7 +11,6 @@ public class Encode {
             int newShiftKey = (charPosition + newKey) % 26;
             char newChar = ALPHABET.charAt(newShiftKey);
 
-//            encrypted += newChar;
             encrypted = encrypted + newChar;
         }
 
