@@ -1,7 +1,7 @@
 public class TextAndShift {
 
-    private String ChosenText;
-    private int ChosenMyInt;
+    public String ChosenText;
+    public int ChosenMyInt;
 
     public String getChosenText() {
         return ChosenText;
