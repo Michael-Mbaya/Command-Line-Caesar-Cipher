@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
@@ -6,5 +7,10 @@ public class DecodeTest {
     public void isDecode_decryptData_true(){
         Decode decode = new Decode();
         assertEquals("yz",decode.getDataProperties("ab",2));
+    }
+    @Test
+    public void decode_instanceOf_object(){
+        Decode decode = new Decode();
+        Assert.assertTrue(decode instanceof Object);
     }
 }
